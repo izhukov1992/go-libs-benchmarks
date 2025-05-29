@@ -1,4 +1,4 @@
-module github.com/izhukov1992/go-kafka-benchmarks
+module github.com/izhukov1992/go-libs-benchmarks
 
 go 1.23.8
 
