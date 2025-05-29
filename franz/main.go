@@ -63,9 +63,9 @@ func TestFranzComplex(generate bool, process bool, size int, batch_size int) {
 			for _, record := range fetches.Records() {
 				cl.Produce(ctx, &kgo.Record{Value: record.Value}, promise)
 			}
+			wg.Wait()
 			cl.CommitUncommittedOffsets(ctx)
 		}
-		wg.Wait()
 		complex = time.Since(start)
 	}
 
